@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="layer"></div>
+    <header>
+      <h1 id="title">Join the company of your dreams</h1>
+      <p id="description">Create your successful career with us!</p>
+    </header>
+    <main>
+      <form action="" id="survey-form">
+        <label for="name" id="name-label">Name:</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+        <label for="email" id="email-label">Email:</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Enter your Email"
+          pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
+          required
+        />
+        <label for="number" id="number-label">Number:</label>
+        <input
+          id="number"
+          type="number"
+          name="number"
+          placeholder="Enter your number"
+          min="6"
+          max="9"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          required
+        />
+        <label for="dropdown" id="dropdown-label"
+          >Select your level of programming:</label
+        >
+        <select id="dropdown" required>
+          <option value="Junior">Junior</option>
+          <option value="Middle">Middle</option>
+          <option value="Senior">Senior</option>
+          <option value="Team-lead">Team-lead</option>
+        </select>
+        <label for="gender1">Your gender: </label>
+        <div id="gender-selection">
+          <input type="radio" id="gender1" name="gender" value="male" checked required />
+          <label for="gender1">Male</label>
+          <input type="radio" id="gender2" name="gender" value="female" required />
+          <label for="gender2">Female</label>
+          <input type="radio" id="gender3" name="gender" value="other" required />
+          <label for="gender3">Other</label>
+        </div>
+        <label for="C#">Which programming languages do you know?</label>
+        <div id="lang-selection">
+        <input type="checkbox" id="C#" name="languages" value="C#" checked/>
+        <label for="C#">C#</label>
+        <input type="checkbox" id="C++" name="languages" value="C++"/>
+        <label for="C++">C++</label>
+        <input type="checkbox" id="Javascript" name="languages" value="Javascript"/>
+        <label for="Javascript">Javascript</label>
+        <input type="checkbox" id="HTML/CSS" name="languages" value="HTML/CSS"/>
+        <label for="HTML/CSS">HTML/CSS</label>
+      </div>
+      <label for="comments">Leave your comments below:</label>
+      <Textarea id="comments" rows="8" placeholder="Write your commentaries here">   
+      </Textarea> 
+      <button type="submit" id="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
